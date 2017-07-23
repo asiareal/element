@@ -125,7 +125,7 @@
 
     methods: {
       addToStore() {
-        if (
+        if ( // 判断model是否是Array 并且当前checkbox值并不在父元素数组中
           Array.isArray(this.model) &&
           this.model.indexOf(this.label) === -1
         ) {
@@ -145,7 +145,7 @@
     },
 
     created() {
-      this.checked && this.addToStore();
+      this.checked && this.addToStore(); // 如果默认选中, 把值填进去
     }
   };
 </script>

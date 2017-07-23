@@ -18,7 +18,7 @@
     },
 
     watch: {
-      value(value) {
+      value(value) { // value 的变化，完全由checkbox控制
         this.dispatch('ElFormItem', 'el.form.change', [value]);
       }
     }
